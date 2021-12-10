@@ -60,7 +60,7 @@ const CoinDetails = () => {
           'x-bingapis-sdk': 'true',
           'accept-language': 'en',
           'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
-          'x-rapidapi-key': '570c071dfemshe6cda4cacbfb0b7p1d63afjsnc760bd90febb',
+          'x-rapidapi-key': process.env.REACT_APP_API_KEY,
         },
       },
     )
