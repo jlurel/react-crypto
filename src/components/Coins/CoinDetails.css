@@ -1,0 +1,189 @@
+.grid-item {
+  text-align: left;
+}
+
+.coin-overview,
+.coin-news {
+  grid-column: 1 / 3;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+  padding: 0 20px;
+}
+
+.coin-header {
+  display: inline-flex;
+  align-items: center;
+}
+
+.coin-header__logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.coin-overview__chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 52px 25px;
+}
+
+.coin-overview__summary-table {
+  padding: 10px;
+  border: 1px #cee1ff solid;
+  border-radius: 5px;
+}
+
+.coin-overview__summary-table__header:first-child {
+  padding-right: 10px;
+}
+
+.coin-overview__summary-table__header {
+  padding-bottom: 5px;
+}
+
+.timeperiods {
+  display: inline-flex;
+}
+
+.chart__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40ch;
+}
+
+.chart__action {
+  list-style: none;
+}
+
+.chart__button {
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.chart__button:hover {
+  background-color: #e5efff;
+}
+
+.chart__button-active {
+  background-color: #126bff;
+  color: #ffffff;
+}
+
+.chart__button-active:hover {
+  background-color: #126bff;
+}
+
+.coin-stats__table {
+  width: 100%;
+}
+
+.coin-stats__table-row {
+  border-bottom: 1px solid #4d94ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.coin-stats__table-row__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__icon {
+  margin-right: 15px;
+}
+
+.coin-supply__table {
+  width: 100%;
+}
+
+.coin-supply__table-row {
+  border-bottom: 1px solid #4d94ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.coin-links__table {
+  width: 100%;
+}
+
+.coin-links__table-row {
+  border-bottom: 1px solid #4d94ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.coin-link-type {
+  text-transform: capitalize;
+}
+
+.coin-news__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.coin-news__article {
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.coin-news__article:hover {
+  background-color: #e6f2ff;
+}
+
+.coin-news__article-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coin-news__article-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-news__article-title {
+  margin: 0;
+  text-align: left;
+  width: 90%;
+}
+
+.coin-news__article-image {
+  display: inline-flex;
+}
+
+.coin-news__article-image img {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+}
+
+.coin-news__article-provider {
+  display: inline-flex;
+  align-items: center;
+}
+
+.coin-news__article-provider p {
+  font-size: 0.8rem;
+}
+
+.coin-news__article-provider img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}

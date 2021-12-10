@@ -1,0 +1,75 @@
+.table {
+  color: #001f4d;
+  display: block;
+}
+
+.table-header__row {
+  border-bottom: 1px solid #4d94ff;
+  display: flex;
+  justify-content: stretch;
+  padding: 0 calc(50% - min(80%, 1200px) / 2);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.table-header__cell {
+  padding: 10px;
+  width: 30%;
+}
+
+.table-body__row-link {
+  text-decoration: none;
+}
+
+.table-body__row {
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  height: 60px;
+  padding: 0 calc(50% - min(80%, 1200px) / 2);
+}
+
+.table-body__cell {
+  font-weight: 700;
+  padding: 10px;
+  width: 30%;
+}
+
+.exchange {
+  display: flex;
+  align-items: center;
+}
+
+.exchange-name {
+  text-align: left;
+}
+
+.exchange-rank {
+  min-width: 25px;
+  padding-right: 5px;
+}
+
+.exchange-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  margin: -2px 15px 0 0;
+}
+
+.exchange-logo img {
+  height: 26px;
+  width: 26px;
+}
+
+.exchange-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.exchange-symbol {
+  display: block;
+  font-weight: 500;
+}

@@ -1,0 +1,21 @@
+.navigation {
+    margin-right: 20px;
+}
+
+.navigation__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navigation__links a {
+    color: #001f4d;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navigation__link {
+    padding: 13px 15px 15px;
+}
