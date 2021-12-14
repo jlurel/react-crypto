@@ -49,7 +49,7 @@ const Chart = ({ history }) => {
     aspectRatio: 2,
     plugins: {
       tooltip: {
-        mode: 'interpolate',
+        mode: 'index',
         intersect: false,
       },
     },
