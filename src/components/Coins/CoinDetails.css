@@ -187,3 +187,47 @@
   width: 20px;
   margin-right: 5px;
 }
+
+@media screen and (max-width: 1024px) {
+  .grid-item {
+    text-align: center;
+  }
+
+  .coin-overview,
+  .coin-news {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container > div {
+    padding: 0 5px;
+  }
+
+  .chart__wrapper {
+    position: relative;
+    height: auto;
+  }
+
+  .chart__actions {
+    margin-top: 10px;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .coin-news__container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .coin-overview__chart-header {
+    flex-direction: column;
+  }
+}

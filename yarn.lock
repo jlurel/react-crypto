@@ -3250,6 +3250,11 @@ chart.js@^3.6.2:
   resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-3.6.2.tgz#47342c551f688ffdda2cd53b534cb7e461ecec33"
   integrity sha512-Xz7f/fgtVltfQYWq0zL1Xbv7N2inpG+B54p3D5FSvpCdy3sM+oZhbqa42eNuYXltaVvajgX5UpKCU2GeeJIgxg==
 
+chartjs-plugin-crosshair@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/chartjs-plugin-crosshair/-/chartjs-plugin-crosshair-1.2.0.tgz#54c8223ed40db4a5c380f17967fcf1a11cb2a284"
+  integrity sha512-yohsbME+wT1ODBdErBzWnC6xUDcn2tLeWmGjGDTykjpiT7+FMgibffajxqaCVmdzselxNPirpt76vx33EewSSQ==
+
 check-types@^11.1.1:
   version "11.1.2"
   resolved "https://registry.npmjs.org/check-types/-/check-types-11.1.2.tgz"

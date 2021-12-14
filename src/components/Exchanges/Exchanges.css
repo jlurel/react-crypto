@@ -1,9 +1,9 @@
-.table {
+.exchange-list .table {
   color: #001f4d;
   display: block;
 }
 
-.table-header__row {
+.exchange-list .table-header__row {
   border-bottom: 1px solid #4d94ff;
   display: flex;
   justify-content: stretch;
@@ -12,16 +12,16 @@
   text-transform: uppercase;
 }
 
-.table-header__cell {
+.exchange-list .table-header__cell {
   padding: 10px;
   width: 30%;
 }
 
-.table-body__row-link {
+.exchange-list .table-body__row-link {
   text-decoration: none;
 }
 
-.table-body__row {
+.exchange-list .table-body__row {
   border-bottom: 1px solid #cccccc;
   display: flex;
   align-items: center;
@@ -30,27 +30,27 @@
   padding: 0 calc(50% - min(80%, 1200px) / 2);
 }
 
-.table-body__cell {
+.exchange-list .table-body__cell {
   font-weight: 700;
   padding: 10px;
   width: 30%;
 }
 
-.exchange {
+.exchange-list .exchange {
   display: flex;
   align-items: center;
+  width: 30%;
 }
 
-.exchange-name {
+.exchange-list .exchange-name {
   text-align: left;
 }
 
-.exchange-rank {
-  min-width: 25px;
+.exchange-list .exchange-rank {
   padding-right: 5px;
 }
 
-.exchange-logo {
+.exchange-list .exchange-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,17 +59,85 @@
   margin: -2px 15px 0 0;
 }
 
-.exchange-logo img {
+.exchange-list .exchange-logo img {
   height: 26px;
   width: 26px;
 }
 
-.exchange-link {
+.exchange-list .exchange-link {
   font-weight: 700;
   text-decoration: none;
 }
 
-.exchange-symbol {
+.exchange-list .exchange-symbol {
   display: block;
   font-weight: 500;
+}
+
+.exchange-list .cell-exchange {
+  text-align: start;
+  width: 30%;
+}
+
+.exchange-list .cell-volume {
+  text-align: center;
+  width: 30%;
+}
+
+.exchange-list .cell-markets {
+  text-align: center;
+  width: 20%;
+}
+
+.exchange-list .cell-share {
+  text-align: center;
+  width: 20%;
+}
+
+.exchange-list .cell-website {
+  text-align: end;
+  width: 10%;
+}
+
+@media screen and (max-width: 568px) {
+  .exchange-list .table {
+    font-size: 0.7rem;
+  }
+
+  .exchange-list .table-header__row,
+  .exchange-list .table-body__row {
+    padding: 0 5px;
+  }
+
+  .exchange-list .cell-exchange {
+    text-align: start;
+    width: 50%;
+  }
+
+  .exchange-list .exchange-rank {
+    width: 8px;
+    padding-right: 8px;
+  }
+
+  .exchange-list .exchange-logo {
+    margin-right: 5px;
+  }
+
+  .exchange-list .cell-volume {
+    text-align: center;
+    width: 30%;
+  }
+
+  .exchange-list .cell-markets {
+    display: none;
+  }
+
+  .exchange-list .cell-share {
+    display: none;
+  }
+
+  .exchange-list .cell-website {
+    text-align: end;
+    width: 20%;
+  }
 }

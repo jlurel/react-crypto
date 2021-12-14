@@ -64,17 +64,19 @@ const Coins = () => {
           <p>Loading...</p>
         ) : (
           <table className="table">
-            <tr className="table-header__row">
-              <th className="table-header__cell">Cryptocurrency</th>
-              <th className="table-header__cell">Price</th>
-              <th className="table-header__cell">Market cap</th>
-              <th className="table-header__cell">24h Change</th>
-            </tr>
+            <thead className="thead">
+              <tr className="table-header__row">
+                <th className="table-header__cell cell-crypto">Cryptocurrency</th>
+                <th className="table-header__cell cell-price">Price</th>
+                <th className="table-header__cell cell-mc">Market cap</th>
+                <th className="table-header__cell cell-change">24h</th>
+              </tr>
+            </thead>
 
             {filteredCoins.map((coin) => (
               <Link to={`/coin/${coin.id}`} className="table-body__row-link">
                 <tr className="table-body__row" key={coin.id}>
-                  <td className="table-body__cell">
+                  <td className="table-body__cell cell-crypto">
                     <div className="coin">
                       <span className="coin-rank">{coin.rank}</span>
                       <span className="coin-logo">
@@ -86,13 +88,15 @@ const Coins = () => {
                       </span>
                     </div>
                   </td>
-                  <td className="table-body__cell">$ {Number.parseFloat(coin.price).toFixed(2)}</td>
-                  <td className="table-body__cell">$ {millify(coin.marketCap)}</td>
+                  <td className="table-body__cell cell-price">
+                    $ {Number.parseFloat(coin.price).toFixed(2)}
+                  </td>
+                  <td className="table-body__cell cell-mc">$ {millify(coin.marketCap)}</td>
                   <td
                     className={
                       coin.change > 0
-                        ? 'table-body__cell text-success'
-                        : 'table-body__cell text-danger'
+                        ? 'table-body__cell cell-change text-success'
+                        : 'table-body__cell cell-change text-danger'
                     }
                   >
                     {coin.change} %

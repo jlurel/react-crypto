@@ -1,5 +1,38 @@
 .global-stats__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+  justify-content: space-evenly;
+}
+
+.global-stats__item {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: auto;
+}
+
+.global-stats__item > h4 {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.global-stats__item > p {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  .global-stats__container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+  }
+
+  .global-stats__item {
+    width: 80%;
+  }
+
+  .global-stats__item > h4 {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
 }

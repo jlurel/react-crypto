@@ -53,13 +53,13 @@ const CoinDetails = () => {
 
   const getCoinNews = () => {
     fetch(
-      `https://bing-news-search1.p.rapidapi.com/news/search?q=${coin?.name}+Cryptocurrency&freshness=Month&textFormat=Raw&safeSearch=Off&setLang=EN&count=12`,
+      `https://bing-news-search2.p.rapidapi.com/news/search?q=${coin?.name}+Cryptocurrency&freshness=Month&textFormat=Raw&safeSearch=Off&setLang=EN&count=12`,
       {
         method: 'GET',
         headers: {
           'x-bingapis-sdk': 'true',
           'accept-language': 'en',
-          'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
+          'x-rapidapi-host': 'bing-news-search2.p.rapidapi.com',
           'x-rapidapi-key': process.env.REACT_APP_API_KEY,
         },
       },
@@ -91,11 +91,11 @@ const CoinDetails = () => {
       <div className="grid-item coin-overview">
         <div className="coin-header">
           <img className="coin-header__logo" src={coin.iconUrl} alt={coin.name} />
-          <h1>{`${coin.name} (${coin.symbol}) price`}</h1>
+          <h2>{`${coin.name} (${coin.symbol}) price`}</h2>
         </div>
         <p>{`${coin.name} (${coin.symbol}) live price in US dollar (USD). View value statistics, market cap and supply.`}</p>
         <div className="coin-overview__chart-header">
-          <h2 className="coin-overview__chart-title">{`${coin.symbol} price chart`}</h2>
+          <h3 className="coin-overview__chart-title">{`${coin.symbol} price chart`}</h3>
           <div className="coin-overview__summary">
             <table className="coin-overview__summary-table">
               <thead>
@@ -107,13 +107,17 @@ const CoinDetails = () => {
               <tbody>
                 <tr>
                   <td>{`$ ${Number.parseFloat(coin.price).toFixed(2)}`}</td>
-                  <td>{`${history?.change} %`}</td>
+                  <td
+                    className={history?.change > 0 ? 'text-success' : 'text-danger'}
+                  >{`${history?.change} %`}</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <Chart name={coin.symbol} history={history} />
+        <div className="chart__wrapper">
+          <Chart name={coin.symbol} history={history} />
+        </div>
         <div className="timeperiods">
           <ul className="chart__actions">
             <li className="chart__action">
@@ -175,7 +179,7 @@ const CoinDetails = () => {
         </div>
       </div>
       <div className="grid-item coin-stats">
-        <h2>{`${coin.symbol} value statistics`}</h2>
+        <h3>{`${coin.symbol} value statistics`}</h3>
         <p>{`An overview showing the statistics of ${coin.name}, such as the base and quote currency, the rank, and trading volume.`}</p>
         <table className="coin-stats__table">
           <tbody>
@@ -220,7 +224,7 @@ const CoinDetails = () => {
         </table>
       </div>
       <div className="grid-item coin-supply">
-        <h2>Supply information</h2>
+        <h3>Supply information</h3>
         <p>
           View the total and circulating supply of {coin.name}, including details on how the
           supplies are calculated.
@@ -239,11 +243,11 @@ const CoinDetails = () => {
         </table>
       </div>
       <div className="grid-item coin-description">
-        <h2>{`What is ${coin.name} ?`}</h2>
+        <h3>{`What is ${coin.name} ?`}</h3>
         <div dangerouslySetInnerHTML={{ __html: coin.description }} />
       </div>
       <div className="grid-item coin-links">
-        <h2>{`${coin.name} links`}</h2>
+        <h3>{`${coin.name} links`}</h3>
         <table className="coin-links__table">
           <tbody>
             {coin.links.map((link) => (
@@ -265,7 +269,7 @@ const CoinDetails = () => {
       </div>
       {coinNews ? (
         <div className="grid-item coin-news">
-          <h2>{`${coin.name} news`}</h2>
+          <h3>{`${coin.name} news`}</h3>
           <div className="coin-news__container">
             {coinNews.map((article) => (
               <div className="coin-news__article">

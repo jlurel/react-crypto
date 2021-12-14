@@ -1,36 +1,46 @@
-.searchbox {
+.coin-list {
+  padding-top: 50px;
+}
+
+.coin-list .searchbox {
   display: inline-flex;
   border: 2px solid #cee1ff;
   border-radius: 10px;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 0;
+  margin: 10px 0;
+  width: 100%;
 }
 
-.searchbox__icon {
+.coin-list .searchbox__icon {
   padding: 0 20px;
   height: 20px;
   width: 20px;
 }
 
-.searchbox__input {
+.coin-list .searchbox__input {
   font-size: 1.1rem;
   border: 0;
   margin: 0;
   height: 50px;
-  width: 500px;
+  width: 100%;
 }
 
-.searchbox__input:focus {
+.coin-list .searchbox__input:focus {
   outline: none;
 }
 
-.table {
+.coin-list .table {
   color: #001f4d;
-  display: block;
+  width: 100%;
 }
 
-.table-header__row {
+.coin-list .thead {
+  display: block;
+  padding-top: 10px;
+}
+
+.coin-list .table-header__row {
   border-bottom: 1px solid #4d94ff;
   display: flex;
   justify-content: stretch;
@@ -39,16 +49,11 @@
   text-transform: uppercase;
 }
 
-.table-header__cell {
-  padding: 10px;
-  width: 30%;
-}
-
-.table-body__row-link {
+.coin-list .table-body__row-link {
   text-decoration: none;
 }
 
-.table-body__row {
+.coin-list .table-body__row {
   border-bottom: 1px solid #cccccc;
   display: flex;
   align-items: center;
@@ -57,10 +62,28 @@
   padding: 0 calc(50% - min(80%, 1200px) / 2);
 }
 
-.table-body__cell {
+.coin-list .table-body__cell {
   font-weight: 700;
-  padding: 10px;
-  width: 30%;
+}
+
+.coin-list .cell-crypto {
+  text-align: start;
+  width: 37.5%;
+}
+
+.coin-list .cell-price {
+  text-align: start;
+  width: 25%;
+}
+
+.coin-list .cell-mc {
+  text-align: start;
+  width: 25%;
+}
+
+.coin-list .cell-change {
+  text-align: end;
+  width: 12.5%;
 }
 
 .coin {
@@ -108,4 +131,47 @@
 
 .text-danger {
   color: red;
+}
+
+@media screen and (max-width: 1024px) {
+  .coin-list .searchbox {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .coin-list .table {
+    font-size: 0.7rem;
+  }
+
+  .coin-list .table-header__row,
+  .coin-list .table-body__row {
+    padding: 0 16px;
+  }
+
+  .coin-list .cell-crypto {
+    width: 50%;
+  }
+
+  .coin-list .cell-price {
+    text-align: center;
+    width: 30%;
+  }
+
+  .coin-list .cell-mc {
+    display: none;
+  }
+
+  .coin-list .cell-change {
+    text-align: end;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .coin-list .searchbox {
+    width: 100%;
+    margin: 20px auto;
+  }
 }

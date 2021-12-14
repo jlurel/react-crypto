@@ -31,23 +31,23 @@ const Exchanges = () => {
   }, []);
 
   return (
-    <>
+    <div className="exchange-list">
       <h1>Exchanges</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <table className="table">
           <tr className="table-header__row">
-            <th className="table-header__cell">Exchange</th>
-            <th className="table-header__cell">Volume (24h)</th>
-            <th className="table-header__cell"># Markets</th>
-            <th className="table-header__cell">Market share</th>
-            <th className="table-header__cell">Website</th>
+            <th className="table-header__cell cell-exchange">Exchange</th>
+            <th className="table-header__cell cell-volume">Volume (24h)</th>
+            <th className="table-header__cell cell-markets"># Markets</th>
+            <th className="table-header__cell cell-share">Market share</th>
+            <th className="table-header__cell cell-website">Website</th>
           </tr>
 
           {exchanges.map((exchange) => (
             <tr className="table-body__row" key={exchange.id}>
-              <td className="table-body__cell">
+              <td className="table-body__cell cell-exchange">
                 <div className="exchange">
                   <span className="exchange-rank">{exchange.rank}</span>
                   <span className="exchange-logo">
@@ -56,12 +56,12 @@ const Exchanges = () => {
                   <span className="exchange-name">{exchange.name}</span>
                 </div>
               </td>
-              <td className="table-body__cell">$ {millify(exchange.volume)}</td>
-              <td className="table-body__cell">{exchange.numberOfMarkets}</td>
-              <td className="table-body__cell">
+              <td className="table-body__cell cell-volume">$ {millify(exchange.volume)}</td>
+              <td className="table-body__cell cell-markets">{exchange.numberOfMarkets}</td>
+              <td className="table-body__cell cell-share">
                 {`${Number.parseFloat(exchange.marketShare).toFixed(2)} %`}
               </td>
-              <td className="table-body__cell">
+              <td className="table-body__cell cell-website">
                 <a href={exchange.websiteUrl}>
                   <VscGlobe />
                 </a>
@@ -70,7 +70,7 @@ const Exchanges = () => {
           ))}
         </table>
       )}
-    </>
+    </div>
   );
 };
 
